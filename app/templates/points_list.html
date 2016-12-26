@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Shaurmap | Points list
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for point in points %}
+        <li><a href="/points/{{ point.id }}">{{ point.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

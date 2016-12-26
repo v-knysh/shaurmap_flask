@@ -3,4 +3,5 @@
 {% block content %}
     <h2>here must be {{ point.name }}</h2>
     <div class="address">maybe here must be {{ point.address }} and smth like that</div>
+    <div class="author">and here must be <a href="/users/{{ point.author.id }}">{{ point.author }}</a></div>
 {% endblock %}

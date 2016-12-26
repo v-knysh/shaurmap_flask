@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Shaurmap | {{ user.username }}
+{% endblock %}
+
+{% block content %}
+    <h2>here must be {{ user.username }} and some description</h2>
+    <div class="">here must be points list</div>
+    <ul>
+    {% for point in user.points %}
+        <li>
+            <a href="/points/{{ point.id }}">{{ point.name }} -- {{ point.address }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
