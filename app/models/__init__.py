@@ -1,2 +1,2 @@
 from .user import User
-from .point import Point
+from .point import Point, PointSchema

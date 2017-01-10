@@ -9,19 +9,28 @@
     <link rel="stylesheet" href="/static/css/main.css">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div id="header"><h1><a href="/">Shaurmap header</a></h1></div>
-        {% block content %}{% endblock %}
+    <div class="container">
+        <div class="row">
+            <div id="header"><h1><a href="/">Shaurmap header</a></h1></div>
+            {% block content %}{% endblock %}
+            <div>asdfwgs</div>
+        </div>
+        <div id="map"></div>
+        <div id="footer">footer</div>
     </div>
-</div>
+
+
 
 
 <script src="/static/js/jquery-2.2.3.min.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
+{#<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrscrYaFZEC6FpNp5JuzsudKgWsNf7Ecg&callback=initMap">#}
+{#    </script>#}
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWV5sxpK2FDj8q9ijPtvqPivxYfJU_Qqw&callback=initMap">
+</script>
+
 <script src="/static/js/main.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrscrYaFZEC6FpNp5JuzsudKgWsNf7Ecg&callback=initMap">
-    </script>
+
 
 </body>
 </html>
