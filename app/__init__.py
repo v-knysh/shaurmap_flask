@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_marshmallow import Marshmallow
 from flask_login import LoginManager
+from flask_bootstrap import Bootstrap
 
 
 app = Flask(__name__)
@@ -13,8 +14,9 @@ app.debug = True
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 ma = Marshmallow(app)
-lm = LoginManager()
-lm.init_app(app)
+login_manager = LoginManager()
+login_manager.init_app(app)
+bootstrap = Bootstrap(app)
 
 from app import views, models
 

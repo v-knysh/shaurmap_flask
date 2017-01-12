@@ -5,14 +5,8 @@
 {% endblock %}
 
 {% block content %}
-{#<div id="wrapper">#}
-{#    <div id="map">here be (map) dragons</div>#}
+    <div id="map"></div>
     <ul id="pointsholder">
-{#        <li class="points"><a href="/point/1">point 1</a></li>#}
-{#        <li class="points"><a href="/point/2">point 2</a></li>#}
-{#        <li class="points"><a href="/point/3">point 3</a></li>#}
-{#        <li class="points"><a href="/point/4">point 4</a></li>#}
-{#        <li class="points"><a href="/point/5">point 5</a></li>#}
         {% for point in points %}
             <li class="point"><a href="/point/{{ point.id }}">{{ point.name }}</a></li>
         {% endfor %}
@@ -22,3 +16,6 @@
 {#</div>#}
 {% endblock %}
 
+{% block extra_js %}
+<script src="/static/js/main.js"></script>
+{% endblock %}

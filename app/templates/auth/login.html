@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}
+    Shaurmap
+{% endblock %}
+
+{% block content %}
+<form method="POST" action="/login">
+    {{ form.csrf_token }}
+    {{ wtf.quick_form(form) }}
+</form>
+{#</div>#}
+{% endblock %}

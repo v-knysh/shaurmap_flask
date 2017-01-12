@@ -6,7 +6,8 @@
 
 {% block content %}
     <h2>here must be {{ user.username }} and some description</h2>
-    <div class="">here must be points list</div>
+    <div class="">User email = {{ user.email }}</div>
+    <div class="">here must be map with points, but now its just point list</div>
     <ul>
     {% for point in user.points %}
         <li>
